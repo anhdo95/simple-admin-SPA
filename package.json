@@ -1,0 +1,8 @@
+{
+  "name": "simple-admin-SPA",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:anhdo95/simple-admin-SPA.git",
+  "author": "Anh Do <dinhanhdo95@gmail.com>",
+  "license": "MIT"
+}
