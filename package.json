@@ -8,6 +8,7 @@
   "dependencies": {
     "antd": "^3.26.4",
     "local-storage": "^2.0.0",
+    "lodash": "^4.17.15",
     "moment": "^2.24.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -22,6 +23,7 @@
     "@babel/preset-react": "^7.7.4",
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
+    "babel-plugin-lodash": "^3.3.4",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.4.0",
     "eslint": "^6.8.0",
@@ -30,6 +32,8 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.17.0",
     "html-webpack-plugin": "^3.2.0",
+    "lodash-webpack-plugin": "^0.11.5",
+    "mini-css-extract-plugin": "^0.9.0",
     "react-hot-loader": "^4.12.18",
     "sass": "^1.24.0",
     "sass-loader": "^8.0.0",
@@ -42,7 +46,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server --config ./webpack/webpack.dev.js --open",
-    "build": "webpack",
+    "build": "webpack --config ./webpack/webpack.prod.js",
     "lint:js": "eslint src/**/*.js"
   }
 }
