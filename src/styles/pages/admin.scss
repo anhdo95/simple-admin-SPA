@@ -1,0 +1,25 @@
+.admin-page {
+  display: grid;
+  grid-template-columns: minmax(min-content, 25rem) 1fr;
+  min-height: 100vh;
+
+  &__header {
+    text-align: right;
+    background-color: $color-grey-light-3;
+  }
+
+  &__user {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-grey-light-4;
+    }
+  }
+
+  &__user-icon {
+    margin-right: 1rem;
+  }
+}
