@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Table, Button } from 'antd'
+import { Table, Button, Tag } from 'antd'
 import moment from 'moment'
 import ls from 'local-storage'
 import uuidv4 from 'uuid/v4'
@@ -36,6 +36,12 @@ const Presenter = (props) => {
     {
       title: i18n.get('common.tags'),
       dataIndex: 'tags',
+      width: '20%',
+      render(tags) {
+        return tags.map(tag => (
+          <Tag key={tag} color="#87d068">{tag}</Tag>
+        ))
+      }
     },
     {
       title: i18n.get('common.date'),
