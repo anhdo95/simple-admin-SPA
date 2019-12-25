@@ -22,7 +22,7 @@ const App = (props) => {
     if (isLoggedInUser) {
       props.setLoggedInUser(user.username, user.isLoggedIn)
     }
-  }, [])
+  }, [ user, isLoggedInUser ])
 
   const PrivateRoute = ({ children, ...rest }) => {
     return (
