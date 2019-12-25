@@ -11,20 +11,6 @@ import EditablePost from '@/components/EditablePost/Container'
 import i18n from '@/i18n'
 import { USER_POSTS_STORAGE, FULL_DATETIME_FORMAT } from '@/constant'
 
-// const data = [
-//   {
-//     key: '1',
-//     title: 'Christmas brings joy to shoppers, retailers alike',
-//     author: 'Minh Huong',
-//     category: 'Economy',
-//     content: 'Lorem ipsum',
-//     tags: 'christmas, shoppers, retailers, economy',
-//     published: '2019/12/02 12:10:23'
-//   },
-// }
-
-// rowSelection object indicates the need for row selection
-
 const Presenter = (props) => {
   const [ visible, setVisible ] = useState(false)
   const [ selectedPost, setSelectedPost ] = useState(null)
@@ -114,6 +100,14 @@ const Presenter = (props) => {
   }
 
   const handleDelete = () => {
+    if (!selectedRowKeys || !selectedRowKeys.length) {
+      return
+    }
+
+    if (!confirm(i18n.get('message.notification.post.deletingConfirmation'))) {
+      return
+    }
+
     const posts = ls(USER_POSTS_STORAGE)
 
     const updatedPosts = posts.filter(p => !selectedRowKeys.includes(p.key))
