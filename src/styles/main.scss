@@ -1,0 +1,15 @@
+@import '@/styles/variables';
+@import '@/styles/utilities';
+@import '@/styles/mixins';
+
+@import '@/styles/base';
+
+@import '@/styles/components/sidebar';
+@import '@/styles/components/posts';
+
+@import '@/styles/pages/login';
+@import '@/styles/pages/admin';
+
+#root {
+  min-height: 100vh;
+}

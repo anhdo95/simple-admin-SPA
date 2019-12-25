@@ -1,0 +1,43 @@
+// TRANSFORM
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+// POSITION
+.abs-full {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.abs-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// ALIGN
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+// MARGIN
+.mb-md {
+  margin-bottom: 2rem;
+}
+
+.ml-xs {
+  margin-left: .5rem;
+}
+
+.ml-md {
+  margin-left: 2rem;
+}
+

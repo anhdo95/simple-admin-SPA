@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-d
 
 import { composeContainer } from '@/util'
 
+import '@/styles/main.scss'
+
 const App = (props) => {
   const PrivateRoute = ({ children, ...rest }) => {
     return (

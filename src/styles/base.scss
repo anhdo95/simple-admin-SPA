@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 50%; // This defines what 1rem is
+
+  @include media($ms) {
+    font-size: 56.25%;
+  }
+
+  @include media($ml) {
+    font-size: 62.5%;
+  }
+
+  @include media($xxl) {
+    font-size: 75%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  font-family: $font-primary;
+}
