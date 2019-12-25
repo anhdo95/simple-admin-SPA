@@ -1,4 +1,5 @@
 import React from 'react'
+import propTypes from 'prop-types'
 import { Switch, Route, useHistory, useRouteMatch } from 'react-router-dom'
 import { Menu, Dropdown, Icon } from 'antd'
 
@@ -48,6 +49,11 @@ const Presenter = (props) => {
       </div>
     </div>
   )
+}
+
+Presenter.propTypes = {
+  username: propTypes.string.isRequired,
+  removeLoggedInUser: propTypes.func.isRequired
 }
 
 export default Presenter
