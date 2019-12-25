@@ -3,6 +3,8 @@ import { Link, useHistory, useLocation } from 'react-router-dom'
 import { Form, Icon, Input, Button, Checkbox, notification } from 'antd'
 import reduce from 'lodash/reduce'
 import ls from 'local-storage'
+
+import i18n from '@/i18n'
 import { LOGGED_IN_USER_STORAGE } from '@/constant'
 
 const Presenter = (props) => {
@@ -26,7 +28,7 @@ const Presenter = (props) => {
         }
 
         notification.error({
-          message: 'Your account doesn\'t exist. Please try another one.'
+          message: i18n.get('message.form.error.accountNonExist')
         })
       }
     })
@@ -38,7 +40,7 @@ const Presenter = (props) => {
 
     const formItems = {
       username: {
-        rules: [ { required: true, message: 'Please input your username!' } ],
+        rules: [ { required: true, message: i18n.get('message.form.error.usernameRequired') } ],
         initialValue: remember ? username : '',
         element: (
           <Input
@@ -48,7 +50,7 @@ const Presenter = (props) => {
         )
       },
       password: {
-        rules: [ { required: true, message: 'Please input your password!' } ],
+        rules: [ { required: true, message: i18n.get('message.form.error.passwordRequired') } ],
         element: (
           <Input
             prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
