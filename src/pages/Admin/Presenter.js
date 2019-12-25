@@ -4,6 +4,7 @@ import { Switch, Route, useHistory, useRouteMatch } from 'react-router-dom'
 import { Menu, Dropdown, Icon } from 'antd'
 
 import Sidebar from '@/components/Sidebar/Container'
+import Posts from '@/components/Posts/Container'
 
 const Presenter = (props) => {
   const history = useHistory()
@@ -42,7 +43,7 @@ const Presenter = (props) => {
           <Switch>
             <Route exact path={path}></Route>
             <Route path={`${path}/posts`}>
-              <div>Posts</div>
+              <Posts />
             </Route>
           </Switch>
         </main>
