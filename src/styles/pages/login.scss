@@ -1,0 +1,13 @@
+.login-page {
+  min-height: 100vh;
+  padding-top: 7rem;
+  background-color: $color-grey-light-3;
+
+  &__container {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 7rem;
+    background-color: $color-white;
+    box-shadow: $shadow-secondary;
+  }
+}
