@@ -3,8 +3,11 @@ import React, { useEffect } from 'react'
 import { hot } from 'react-hot-loader/root'
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 
+import Login from '@/pages/Login/Container'
+
 import { composeContainer } from '@/util'
 
+import 'antd/dist/antd.css'
 import '@/styles/main.scss'
 
 const App = (props) => {
@@ -47,7 +50,6 @@ const App = (props) => {
   )
 }
 
-const Login = () => <div>Login</div>
 const Admin = () => <div>Admin</div>
 
 const mapStateToProps = (state) => {
