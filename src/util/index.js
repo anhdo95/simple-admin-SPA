@@ -1,5 +1,6 @@
 import { connect } from 'react-redux'
 import noop from 'lodash/noop'
+import moment from 'moment'
 
 /**
  * Composes single-argument functions from right to left. The rightmost
@@ -36,3 +37,12 @@ export const composeContainer = (
 ) => compose(
   connect(mapStateToProps, mapDispatchToProps),
 )(component)
+
+/**
+ * Whether a date was in the past
+ * @param {moment.Moment} current
+ */
+export const disabledDate = (current) => {
+  // Can not select days before today and today
+  return current && current <= moment().endOf('day')
+}
